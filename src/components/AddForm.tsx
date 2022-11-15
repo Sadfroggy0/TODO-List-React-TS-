@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {TaskForm} from "../models/TaskForm";
 
 export const AddForm = ({addItem}:any) => {
     const [newTask,setNewTask]=useState('')
