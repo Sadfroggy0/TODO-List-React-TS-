@@ -19,4 +19,4 @@ export const list :TaskForm[]= [
     {id:4, name:'todo4'},
 ]
 
-const counter: number = list.length;
+//const counter: number = list.length;

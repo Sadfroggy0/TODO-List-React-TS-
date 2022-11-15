@@ -9,7 +9,7 @@ function App() {
     const[items,setItems] = useState<TaskForm[]>([])
 
     const addItem = (receivedItem:string)=>{
-        if (receivedItem != ''){
+        if (receivedItem !== ''){
             const newItem:TaskForm = {id:counter, name: receivedItem}
             setCounter(counter+1)
             items.push(newItem)
