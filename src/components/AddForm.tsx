@@ -1,26 +1,26 @@
 import React, {useState} from "react";
+// import {TaskForm} from "../models/TaskForm";
 
 export const AddForm = ({addItem}:any) => {
-    const [newTask,setNewTask]=useState('')
 
-    const handleSubmit = (e:any) =>{
+    const [newTask,setNewTask]=useState('')
+    const handleSubmit = (e:React.FormEvent) =>{
         e.preventDefault();
         addItem(newTask)
         setNewTask('')
-
     }
 
-    function handleChange (event:any) {
-        setNewTask(event.currentTarget.value)
-    }
+    // const handleChange  = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    //     setNewTask(event.target.value)
+    // }
 
     return(
         <form onSubmit={handleSubmit}>
             <input className={"border-2 border-indigo-300 rounded-full"}  type={"text"}
                    value={newTask}
                    placeholder={"Write new task"}
-                   onChange={handleChange}
 
+                   onChange={event => setNewTask(event.target.value)}
             />
 
             <button type={"submit"}

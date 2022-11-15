@@ -1,4 +1,4 @@
-import {TaskForm} from "../models/TaskForm";
+import {ITask} from "../models/ITask";
 
 // function  readFile(fileName:Blob):TaskForm[]{
 //     const temp:TaskForm[] = []
@@ -12,7 +12,8 @@ import {TaskForm} from "../models/TaskForm";
 //     return  temp
 // }
 
-export const list :TaskForm[]= [
+export const list :ITask[]= [
+    
     {id:1, name:'todo1'},
     {id:2, name:'todo3'},
     {id:3, name:'todo3'},
